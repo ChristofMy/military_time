@@ -76,5 +76,8 @@ if __name__ == "__main__":
     
     if prefix == "PM":
         hours = str(int(hours) + 12)
+        if int(hours) == 24:
+            print("Cannot have 24 as an hour")
+            exit()
         
     convert_to_military(hours, minutes) 
