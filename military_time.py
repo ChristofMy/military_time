@@ -25,7 +25,7 @@ def printing(to_word):
 
 def convert_to_military(hours, minutes):
     hours_int = int(hours)
-    
+    print("Formatted time: ",end='')
     # Do not consider 0:00AM as that would be incorrect format
     if hours_int == 12 and prefix == "AM":
         print(times[0], end = ' ')
@@ -39,7 +39,7 @@ def convert_to_military(hours, minutes):
         
         
 if __name__ == "__main__":
-    time = input()
+    time = input("Time to be formatted: ")
     prefix = time[-2:]
     if not (prefix == "AM" or prefix == "PM"):
         print("Incorrect format, needs AM or PM")
